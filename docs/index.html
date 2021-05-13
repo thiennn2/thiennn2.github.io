@@ -60,6 +60,35 @@
         </code>
       </pre>
     </article>
+    <article>
+      <h3><a href="https://github.com/thiennn2/example-node-fetch">Example node-fetch</a></h3>
+      <small>
+        <a href="#">#node</a>
+        <a href="#">#fetch</a>
+        <a href="#">#node-fetch</a>
+      </small>
+      <pre>
+        <code>
+          $ npm install node-fetch
+          $ cat index.js
+          #!/usr/bin/node
+          const fetch = require("node-fetch")
+
+          fetch('https://my-json-server.typicode.com/typicode/demo/posts', {
+            mode: 'cors',
+            headers: {
+              'Content-Type': 'application/xml',
+              'Accept': '*/*'
+            }
+          })
+            .then(resp => resp.text())
+            .then(console.log)
+            .catch(console.error)
+          $ node index.js
+          # See result below :))
+        </code>
+      </pre>
+    </article>
   </main>
 </body>
 </html>
